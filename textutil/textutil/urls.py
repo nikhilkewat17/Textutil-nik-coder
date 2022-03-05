@@ -16,24 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import view
-# code for video 6
-#urlpatterns = [
-#    path('admin/', admin.site.urls),
- #   path('',view.index,name='index'),
-  #  path('about/',view.about,name='about'),
-#]
-# code for pipe video 7
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',view.index,name='index'),
-    #path('',view.about,name='about'),
-    #path('',view.contact,name='contact'),
     path('analyze',view.analyze,name='analyze'),
     path('nik1',view.nik1,name='nik1'),
-
-    #path('capitalizefirst',view.capfirst, name='capfirst'),
-    #path('newlineremove',view.newlineremove, name='newlineremove'),
-    #path('spaceremove',view.spaceremove, name='spaceremove'),
-    #path('charcount', view.charcount, name='charcount'),
+    path('about', view.about, name='about'),
+    path('contact', view.contact, name='contact'),
 ]
